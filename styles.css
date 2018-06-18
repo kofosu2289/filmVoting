@@ -1,0 +1,259 @@
+
+			body {
+				background-color: #123;
+				font-family: sans-serif;
+				color: #153;
+			}
+			
+			#wrapper {
+				display: grid;
+				grid-gap: 10px;
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					'banner'
+					'action'
+					'animation'
+					'biography' 'comedy'
+					'drama'
+					'family'
+					'horror'
+					'musical'
+					'mystery'
+					'romance'
+					'scifi'
+					'sports'
+					'aside';
+				background-color: #600;
+				width: 95%;
+				margin: 0 auto;
+				padding: 2rem;
+				text-align: center;
+			}
+			
+			#banner {
+/*				display: inline-block;*/
+				grid-area: banner;
+				background: url(images/popcorn-vote-logo.png);
+				background-position: center;
+				background-repeat: no-repeat;
+/*				width: 60%;*/
+				height: 222px;
+			}
+			
+			aside {
+				grid-area: aside;
+				background-color: #8ee;
+/*				width: 40%;*/
+/*				float: right;*/
+				overflow-y: scroll;
+			}
+			
+			aside div {
+				background-color: rgba(24, 222, 22, 0.3);
+				padding: 2px 0 0 10px;
+				border-bottom: 2px solid yellowgreen;
+				box-shadow: 2px 2px 2px darkolivegreen;
+				text-align: center;
+			}
+			
+			aside div p {
+				font-size: 0.8rem;
+			}
+			
+			h4 {
+				display: inline-block;
+				padding: 2px;
+				width: 20%;
+				font-size: 12px;
+			}
+			
+			p {
+				display: inline-block;
+				padding: 2px;
+				margin-left: 10%;
+			}
+			
+			#action{
+          grid-area: action;
+          background-image: url(images/btns/btn-action-1.png);
+			}
+			
+			#animation{
+          grid-area: animation;
+          background-image: url(images/btns/btn-animation-1.png);
+			}
+			
+			#biography{
+          grid-area: biography;
+          background-image: url(images/btns/btn-biography-1.png);
+			}
+			
+			#comedy{
+          grid-area: comedy;
+          background-image: url(images/btns/btn-comedy-1.png);
+			}
+			
+			#drama{
+          grid-area: drama;
+          background-image: url(images/btns/btn-drama-1.png);
+			}
+			
+			#family{
+          grid-area: family;
+          background-image: url(images/btns/btn-family-1.png);
+			}
+			
+			#horror{
+          grid-area: horror;
+          background-image: url(images/btns/btn-horror-1.png);
+			}
+			
+			#musical{
+          grid-area: musical;
+          background-image: url(images/btns/btn-musical-1.png);
+			}
+			
+			#mystery{
+          grid-area: mystery;
+          background-image: url(images/btns/btn-mystery-1.png);
+			}
+			
+			#romance{
+          grid-area: romance;
+          background-image: url(images/btns/btn-romance-1.png);
+			}
+			
+			#scifi{
+          grid-area: scifi;
+          background-image: url(images/btns/btn-scifi-1.png);
+			}
+			
+			#sports{
+          grid-area: sports;
+          background-image: url(images/btns/btn-sports-1.png);
+			}
+			
+			 #action:hover{
+          background-image: url(images/btns/btn-action-2.png);
+        }
+			
+			 #animation:hover{
+          background-image: url(images/btns/btn-animation-2.png);
+        }
+			
+			#biography:hover{
+          background-image: url(images/btns/btn-biography-2.png);
+        }
+			 #comedy:hover{
+          background-image: url(images/btns/btn-comedy-2.png);
+        }
+			
+			 #drama:hover{
+          background-image: url(images/btns/btn-drama-2.png);
+        }
+			
+			 #family:hover{
+          background-image: url(images/btns/btn-family-2.png);
+        }
+			
+			 #horror:hover{
+          background-image: url(images/btns/btn-horror-2.png);
+        }
+			
+			 #musical:hover{
+          background-image: url(images/btns/btn-musical-2.png);
+        }
+			
+			 #mystery:hover{
+          background-image: url(images/btns/btn-mystery-2.png);
+        }
+			
+			 #romance:hover{
+          background-image: url(images/btns/btn-romance-2.png);
+        }
+			
+			 #scifi:hover{
+          background-image: url(images/btns/btn-scifi-2.png);
+        }
+			
+			 #sports:hover{
+          background-image: url(images/btns/btn-sports-2.png);
+        }
+			
+			.genre-btn{
+          width: 206px;
+          height: 259px;
+          margin: 5px auto;
+          border-radius: 10px;
+          cursor: pointer;
+          background-position: left;
+          background-size: cover;
+        }
+			
+			.vote-bar{
+          display: block;
+          padding: 0px;
+          height: 25px;
+          width: 5px;
+          margin: 0;
+          background-color: rgba(244, 244, 11, 0.6);
+          box-shadow: 2px 2px 2px darkgreen;
+			}
+			
+			@media screen and (min-width: 600px) {
+				#wrapper {
+					grid-template-columns: repeat(2, 1fr) 2fr;
+					grid-template-areas:
+					'banner banner aside'
+						'action animation aside'
+						'biography comedy aside'
+						'drama family aside'
+						'horror musical aside'
+						'mystery romance aside'
+						'scifi sports aside';
+					
+				}
+			}
+			
+			@media screen and (min-width: 800px) {
+				#wrapper {
+					grid-template-columns: repeat(3, 1fr) 4fr;
+					grid-template-areas: 'banner banner banner aside'
+						'action animation biography aside'
+						'comedy drama family aside'
+						'horror musical mystery aside'
+						'romance scifi sports aside';
+						width: 90%;
+				}
+				
+				.genre-btn {
+					width: 145px;
+					height: 180px;
+				}
+				
+				h4{
+					font-size: 16px;
+				}
+				
+				aside div p {
+					font-size: 1rem;
+				}
+			}
+			
+			@media screen and (min-width:1100px) {
+				#wrapper {
+					grid-template-columns: repeat(4, 1fr) 3fr;
+					grid-template-areas: 
+						'banner banner banner banner aside'
+						'action animation biography comedy aside'
+						'drama family horror musical aside'
+						'mystery romance scifi sports aside';
+					width: 90%;
+				}
+				
+				.genre-btn {
+					width: 120px;
+					height: 152px;
+				}
+			}
+		
